@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Front End Interview Handbook',
   tagline:
-    'Front End interview preparation materials for busy engineers - pop quizzes, coding, front end system design and more!',
-  url: 'https://frontendinterviewhandbook.com',
+    'Front end interview preparation materials for busy engineers - pop quizzes, coding, algorithms, front end system design and more!',
+  url: 'https://www.frontendinterviewhandbook.com',
   baseUrl: '/',
   trailingSlash: true,
   favicon: 'img/favicon.png',
@@ -25,29 +25,97 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
+        {to: 'introduction', label: 'Get started', position: 'left'},
+        {to: 'blog', label: 'Blog', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',
         },
-        {to: 'blog', label: 'Blog', position: 'right'},
         {
           href: 'https://github.com/yangshun/front-end-interview-handbook',
-          label: 'GitHub',
           position: 'right',
+          className: 'navbar-icon navbar-icon-github',
+          'aria-label': 'GitHub repository',
+        },
+        {
+          href: 'https://www.facebook.com/techinterviewhandbook',
+          position: 'right',
+          className: 'navbar-icon navbar-icon-facebook',
+          'aria-label': 'Facebook page',
         },
         {
           href: 'https://twitter.com/yangshunz',
-          label: 'Twitter',
           position: 'right',
+          className: 'navbar-icon navbar-icon-twitter',
+          'aria-label': 'Twitter page',
         },
       ],
     },
     footer: {
       style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Yangshun Tay. Built with Docusaurus.`,
-    },
-    gtag: {
-      trackingID: 'UA-44622716-3',
+      links: [
+        {
+          title: 'General',
+          items: [
+            {
+              label: 'Get started',
+              href: '/introduction',
+            },
+            {
+              label: 'Blog',
+              href: '/blog',
+            },
+          ],
+        },
+        {
+          title: 'Interviews',
+          items: [
+            {
+              label: 'Pop quiz',
+              href: '/pop-quiz',
+            },
+            {
+              label: 'Coding round',
+              href: '/coding',
+            },
+            {
+              label: 'System design',
+              href: '/front-end-system-design',
+            },
+            {
+              label: 'Behavioral round',
+              href: '/behavioral',
+            },
+          ],
+        },
+        {
+          title: 'About',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/yangshun/front-end-interview-handbook',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com/techinterviewhandbook',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/yangshunz',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Contact us',
+              href: 'mailto:business@techinterviewhandbook.org',
+            },
+          ],
+        },
+      ],
     },
     algolia: {
       apiKey: '6c13c369e8d9809cebb5c51330c914c3',
@@ -69,6 +137,9 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'UA-44622716-3',
         },
       },
     ],
